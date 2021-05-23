@@ -20,9 +20,9 @@
  $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
  $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
- $operadora = isset($_POST["operadora"]) ? trim($_POST["operadora"]): null;
+ $operadora = isset($_POST["operadora"]) ? trim($_POST["operadora"]), 'UTF-8') : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
- $rol = isset($_POST["rol"]) ? trim($_POST["rol"]): null;
+ $rol = isset($_POST["rol"]) ? trim($_POST["rol"]), 'UTF-8') : null;
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$telefono', '$tipo', 
  '$operadora', '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
   if ($conn->query($sql) === TRUE) {
