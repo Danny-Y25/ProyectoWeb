@@ -80,7 +80,8 @@
 			<div class="formulario__grupo" id="grupo__tipo">
 				<label for="tipo" class="formulario__label">Tipo de Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input type="text"  name="tipo" id="tipo" placeholder="">
+					<input type="text"  name="tipo" id="tipo" placeholder=""
+                    onkeyup="return validarCorreo(this)"/>
 					
 				</div>
                 <span id="mensajeTipo" class="error"></span>
@@ -103,7 +104,8 @@
 			<div class="formulario__grupo" id="grupo__Operadora">
 				<label for="Operadora" class="formulario__label">Operadora</label>
 				<div class="formulario__grupo-input">
-					<input type="text"  name="operadora" id="operadora" placeholder="">
+					<input type="text"  name="operadora" id="operadora" placeholder=""
+                    onkeyup="return validarCorreo(this)"/>
 					
 				</div>
                 <span id="mensajeOperadora" class="error"></span>

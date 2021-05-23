@@ -13,16 +13,16 @@
     
  <?php
  //incluir conexión a la base de datos
- include '../../config/conexionBD.php';
+ include '../../Config/conexionBD.php';
  $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
  $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
  $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
- $operadora = isset($_POST["operadora"]) ? trim($_POST["operadora"]): null;
+ $operadora = isset($_POST["operadora"]) ? trim($_POST["operadora"]), 'UTF-8') : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
- $rol = isset($_POST["rol"]) ? trim($_POST["rol"]): null;
+ $rol = isset($_POST["rol"]) ? trim($_POST["rol"]), 'UTF-8') : null;
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$telefono', '$tipo', 
  '$operadora', '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
   if ($conn->query($sql) === TRUE) {

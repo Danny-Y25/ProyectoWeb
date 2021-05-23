@@ -9,6 +9,6 @@ $db_username = "root";
   if ($conn->connect_error) { 
       die("Connection failed: " . $conn->connect_error);
   }else{ 
-      #echo "<p>Conexión exitosa!! :)</p>"; 
+      echo "<p>Conexión exitosa!! :)</p>"; 
         } 
 ?>
