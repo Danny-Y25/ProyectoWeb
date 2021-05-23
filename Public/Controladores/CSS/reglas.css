@@ -1,0 +1,81 @@
+/* Ancho de celda*/
+nav ul li {
+
+    display: table-cell;
+    width: 3%;
+    text-align: center;
+    border: thin solid black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    
+    
+}
+/*Ancho de la tabla*/
+nav {
+    display: table;
+    width: 100%;
+    
+}
+/*Tipo de Tabla*/
+nav ul {
+    display: table-row;
+    margin: 2;
+    
+}
+footer{
+    color: blanchedalmond;
+    position: static;
+}
+a{
+    color: blanchedalmond;
+}
+td {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0 20px;
+    text-align: justify;
+    vertical-align: top;
+    width: 680px;
+    background-color: black;
+}
+
+.news-home {
+    color: blanchedalmond;
+}
+
+header div input{
+    width: 300px;
+    height: 20px;
+    size: 300;
+    text-align: right;
+}
+
+h1{
+    color: blanchedalmond;
+    text-align: center;
+    border: thin solid black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+}
+section img{
+    width: 300px;
+    height: 300px;
+    
+}
+
+#logo{
+    width: 32px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: burlywood;
+    height: 50px;
+}
+
+
+  td{
+      color: cornsilk;
+  }
+

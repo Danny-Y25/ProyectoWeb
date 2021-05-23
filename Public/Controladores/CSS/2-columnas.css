@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/*
+quitamos margin y padding
+y ponemos en neutralidad
+*/
+aside, article, footer,section, nav, header{
+    display: block;
+    margin: 0;
+    padding: 0;
+
+}
+/*
+quitar margenes y padding a los bloques de letras
+*/
+
+html,body,p,h1,h2,h3{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0 auto;
+    
+}
+
+
+/****************************
+Menu
+*/
+
+.cat{
+    margin-top: 50px;
+    list-style: square;
+    display: block;
+}
+
+.li{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    list-style: square;
+}
+
+
+
+
+nav ul li a {
+    color: blanchedalmond;
+}
+/*******************************************/
+/*
+altura y anchura del header
+*/
+
+header img{
+    width: 1300px;
+    height: 200px;
+    
+}
+article{
+    width: 1000px;
+    height: 420px;
+    background: #bcd5b0;
+    float: right;
+    margin: 20px 30px 20px 0px;
+}
+aside{
+    width: 230px;
+    height: 420px;
+    margin: 20px;
+    /*background: black;*/
+    float: left;
+    position: static;
+    z-index: 100;
+    
+}
+
+
+h1{
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+}
+h2{
+    color: white;
+    font-size: 1.8em;
+    text-align: center;
+}
+p{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    color: white;
+}
+
+/*
+imagenes
+*/
+.new-2{
+    float: left;
+    margin-right: 10px;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+}
+
+/*
+pie de pagina
+*/
+
+footer{
+    height: 60px;
+    color: blanchedalmond;
+    position: static;
+    clear: both;
+    margin: 20px;
+}
+
+td {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0 20px;
+    text-align: justify;
+    vertical-align: top;
+    width: 680px;
+    background-color: black;
+}
+h1{
+    color: blanchedalmond;
+    text-align: center;
+    border: thin solid black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    margin: 20px;
+}
+header div input{
+    width: 300px;
+    height: 20px;
+    size: 300;
+    text-align: left;
+    position:relative;
+    left: 900px;
+   
+
+}
+
+
+
