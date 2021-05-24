@@ -12,14 +12,13 @@ MD5('$contrasena')";
     while($row1 = $result->fetch_assoc()) {    
     $rol=$row1['usu_rol'];
     }
-    if($rol == "USER"){
-    
-   echo("sigues");
+    if($rol == "USER"){ 
+        header("Location: ../../Admin/Vista/Usuario/MenuUser.php");
     }else{
-        echo("eres admin");
-    
+        header("Location: ../../Admin/Vista/Admin/MenuAdmin.php");
     }}else {
-    echo("mal");
+        header("Location: ../vista/login.html");
+      
 }
      $conn->close();
 
