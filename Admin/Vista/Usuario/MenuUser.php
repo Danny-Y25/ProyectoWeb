@@ -37,7 +37,7 @@
  }
  include '../../../Config/conexionBD.php';
  $cuenta = $_GET['correo'];
- echo($cuenta);
+ //echo($cuenta);
  $sql = "SELECT * FROM usuario";
  $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and u.usu_correo='$cuenta'";
 
@@ -54,9 +54,9 @@
     echo " <td>" . $row['tel_numero'] . "</td>";
     echo " <td>" . $row['tel_tipo'] . "</td>";
     echo " <td>" . $row['tel_operadora'] . "</td>";
-    echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-    echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-    echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
+    echo " <td> <a href='Eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
+    echo " <td> <a href='Modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
+    echo " <td> <a href='Cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
    contraseña</a> </td>";
     echo "</tr>";
  }
