@@ -25,14 +25,14 @@
  $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', 
  '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
-echo($rol);
+//echo($rol);
  $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
  '$cedula', '$correo')";
 
   if ($conn->query($sql) === TRUE) {
-  echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
+  //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
     if($conn->query($sql2) === TRUE){
-        echo('se creo el telefono');
+        //echo('se creo el telefono');
     }
 
   } else {
@@ -45,7 +45,7 @@ echo($rol);
  
   //cerrar la base de datos
   $conn->close();
-  echo "<a href='../vista/Registrar.html'>Regresar</a>";
+  header("Location: /ProyectoWeb/public/VIsta/Index.html");
  
   ?>
  </body>

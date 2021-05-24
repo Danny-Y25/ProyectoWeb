@@ -2,7 +2,7 @@
 <html>
 <head>
  <meta charset="UTF-8">
- <script type="text/javascript" src="../../../config/buscarPorCedula.js">
+ <script type="text/javascript" src="../..//Controladores/Usuario/BuscarUser.js">
     </script>
  <title>Menu Usuarios</title>
 </head>
@@ -36,6 +36,7 @@
  header("Location: /ProyectoWeb/public/VIsta/Login.html");
  }
  include '../../../Config/conexionBD.php';
+ 
  $sql = "SELECT * FROM usuario";
  $result = $conn->query($sql);
 
