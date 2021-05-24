@@ -50,7 +50,6 @@
                     echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
                     echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
                    contraseña</a> </td>";
-                   echo " <td> <a href='../../../Public/Controladores/Agregar.php?codigo=" . $row['usu_codigo'] . "'>Agregar usuario</a> </td>";
                     echo "</tr>";
                 
                
