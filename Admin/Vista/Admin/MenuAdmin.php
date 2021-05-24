@@ -17,7 +17,7 @@
 <h1 style="color: azure;" >Guia telefonica</h1>
 </header>
 <div>
-<button onclick="location.href='../../../Public/VIsta/Registrar.html'" >Nuevo usuario</button>    
+<button onclick="location.href='Agregar.php'" >Nuevo usuario</button>    
 </div>
 <table style="width:100%">
  <tr>
