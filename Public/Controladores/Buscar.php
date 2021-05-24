@@ -35,7 +35,7 @@
  echo " <td>" . $row1['tel_numero'] . "</td>";
  echo " <td>" . $row1['tel_tipo'] . "</td>";
  echo " <td>" . $row1['tel_operadora'] . "</td>";
-$cont=$cont+1;
+
  
     /*if($result->num_rows > 0 ){
 
