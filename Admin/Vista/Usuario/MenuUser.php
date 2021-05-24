@@ -9,6 +9,7 @@
 <body>
 <div id="etiqueta"><b>Ingrese el correo o cedula para buscar </b></div>
 
+
     <form onsubmit="return buscarPorCedula()">
         
         <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese la cedula">
@@ -72,6 +73,7 @@
  echo "</tr>";
  }
  echo " <td> <a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a> </td>";
+ 
  $conn->close();
  ?>
  </table>

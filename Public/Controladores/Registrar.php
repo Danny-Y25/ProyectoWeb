@@ -45,7 +45,7 @@
  
   //cerrar la base de datos
   $conn->close();
-  header("Location: /ProyectoWeb/public/VIsta/Index.html");
+  header("Location: /ProyectoWeb/ProyectoWeb/Public/VIsta/Index.html");
  
   ?>
  </body>

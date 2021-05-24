@@ -64,7 +64,8 @@
  echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
  echo "</tr>";
  }
- echo " <td> <a href='../../../config/cerrar_sesion.php'>Cerrar Sesion</a> </td>";
+ echo " <td> <a href='../../../config/cerrar_sesion.php'>Cerrar_Sesion</a> </td>";
+ 
 
  $conn->close();
  ?>
