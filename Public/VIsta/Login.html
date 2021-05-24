@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Iniciar sesión</title>
+    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/reglas.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/index.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/2-columnas.css"/>
 </head>
 
 <body style="background-color: #094f77;">
+    <header>
+        <img src="../../imagenes/banner.jpg" alt="">
+        <h1>Guia telefonica</h1>
+    </header>
     <form id="formulario01" method="POST" action="../controladores/login.php" style="text-align: center;">
         <label for="email" style="color: azure;">Correo electrónico &nbsp;&nbsp;</label>
         <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..." />
@@ -24,6 +33,23 @@
     <div style="text-align: center;">
         <button onclick="location.href='Registrar.html'" >Registrarse</button>
     </div>
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <p>Danny Gustavo Yunga Yunga</p>
+                    <p>Universidad Politécnica Salesiana</p>
+                    &copy; Todos los Derechos Resrvados <br/>
+                </td>
+                <td>
+                    <p>Call: <a href="tel:+59350985103603">(593) 0985103603</a></p>
+                    <p>Email: <a href="mailto:dannyy25000@gmail.com">dannyy25000@gmail.com</a></p>
+
+                </td>
+            </tr>
+        </table>
+        
+    </footer>
     
 </body>
 
