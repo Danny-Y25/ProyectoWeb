@@ -33,9 +33,9 @@
  <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
+ header("Location: /ProyectoWeb/public/VIsta/Login.html");
  }
- include '../../../config/conexionBD.php';
+ include '../../../Config/conexionBD.php';
  $sql = "SELECT * FROM usuario";
  $result = $conn->query($sql);
 
