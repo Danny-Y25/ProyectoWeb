@@ -9,11 +9,11 @@
 
 session_start();
 if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
 }
 
  $codigo = $_GET["codigo"];
- $sql = "SELECT * FROM usuario u, telefono t where u.usu_cedula=t.usu_cedula andu.usu_codigo=$codigo";
+ $sql = "SELECT * FROM usuario  where usu_codigo=$codigo";
 
  include '../../../Config/conexionBD.php';
  $result = $conn->query($sql);
@@ -40,17 +40,6 @@ disabled/>
  <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
 disabled/>
  <br>
- <label for="direccion">Telefono (*)</label>
- <input type="text" id="telefono" name="telefono" value="<?php echo $row["tel_numero"];
-?>" disabled/>
- <br>
- <label for="telefono">Tipo (*)</label>
- <input type="text" id="tipo" name="tipo" value="<?php echo $row["tel_tipo"];
-?>" disabled/>
- <br>
- <label for="fecha">Operadora (*)</label>
- <input type="date" id="operadora" name="operadora" value="<?php echo
-$row["tel_operadora"]; ?>" disabled/>
  <br>
  
  

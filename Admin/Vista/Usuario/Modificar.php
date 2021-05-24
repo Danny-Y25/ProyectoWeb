@@ -8,7 +8,7 @@
  <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }
  $codigo = $_GET["codigo"];
  $sql = "SELECT * FROM usuario where usu_codigo=$codigo";
@@ -19,7 +19,7 @@
 
  while($row = $result->fetch_assoc()) {
  ?>
- <form id="formulario01" method="POST" action="../../controladores/usuario/modificar.php">
+ <form id="formulario01" method="POST" action="../../Controladores/Usuario/Modificar.php">
 
  <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
@@ -33,18 +33,7 @@ required placeholder="Ingrese la cedula ..."/>
  <label for="apellidos">Apelidos (*)</label>
  <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"];
 ?>" required placeholder="Ingrese los dos apellidos ..."/>
- <br>
- <label for="direccion">Dirección (*)</label>
- <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
-?>" required placeholder="Ingrese la dirección ..."/>
- <br>
- <label for="telefono">Teléfono (*)</label>
- <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
-?>" required placeholder="Ingrese el teléfono ..."/>
- <br>
- <label for="fecha">Fecha Nacimiento (*)</label>
- <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?php echo
-$row["usu_fecha_nacimiento"]; ?>" required placeholder="Ingrese la fecha de nacimiento ..."/>
+ 
  <br>
  <label for="correo">Correo electrónico (*)</label>
  <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
