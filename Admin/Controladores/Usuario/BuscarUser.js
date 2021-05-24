@@ -1,7 +1,7 @@
 function buscarPorCedula() {
     var cedula = document.getElementById("cedula").value;
-    var correo = document.getElementById("correo").value;
-    
+    //var correo = document.getElementById("correo").value;
+
     if (cedula == "") {
     document.getElementById("informacion").innerHTML = "";
    
@@ -21,12 +21,12 @@ function buscarPorCedula() {
     document.getElementById("informacion").innerHTML = this.responseText;
     }
     };
-    xmlhttp.open("GET","../Controladores/Buscar.php?cedula="+cedula,true);
+    xmlhttp.open("GET","../../Controladores/Usuario/BuscarUser.php?cedula="+cedula,true);
     xmlhttp.send();
     }
 
 
-    if(correo == ""){
+   /* if(correo == ""){
         document.getElementById("informacion").innerHTML = "";
    
 
@@ -47,6 +47,6 @@ function buscarPorCedula() {
     };
     xmlhttp.open("GET","../Controladores/BuscarCorreo.php?correo="+correo,true);
     xmlhttp.send();  
-    }
+    }*/
     return false;
 }

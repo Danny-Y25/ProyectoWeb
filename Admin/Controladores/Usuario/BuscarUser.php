@@ -1,8 +1,8 @@
 <?php
  //incluir conexión a la base de datos
- include "../../Config/conexionBD.php";
+ include "../../../Config/conexionBD.php";
  $cedula = $_GET['cedula'];
- 
+
  
  //echo "Hola " . $cedula;
 
