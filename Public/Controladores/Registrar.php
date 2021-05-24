@@ -27,6 +27,7 @@
  '$operadora', '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
   if ($conn->query($sql) === TRUE) {
   echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
+  echo($contrasena);
   } else {
   if($conn->errno == 1062){
   echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
