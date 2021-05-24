@@ -3,7 +3,7 @@
  include '../../Config/conexionBD.php';
  $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
- $sql = "SELECT usu_rol FROM usuario WHERE usu_correo = '$usuario' and usu_password =
+ $sql = "SELECT usu_rol FROM usuario WHERE usu_correo = '$usuario' and usu_eliminado = 'N' and usu_password =
 MD5('$contrasena')";
  $result = $conn->query($sql);
  

@@ -9,7 +9,7 @@
 
 session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }
 
  //incluir conexión a la base de datos
@@ -22,6 +22,8 @@ usu_password=MD5('$contrasena1')";
  $result1 = $conn->query($sqlContrasena1);
 
  if ($result1->num_rows > 0) {
+    
+
  date_default_timezone_set("America/Guayaquil");
  $fecha = date('Y-m-d H:i:s', time());
  $sqlContrasena2 = "UPDATE usuario " .
@@ -37,7 +39,11 @@ usu_password=MD5('$contrasena1')";
     }else{
     echo "<p>La contraseña actual no coincide con nuestros registros!!! </p>";
     }
-    echo "<a href='../../vista/usuario/index.php'>Regresar</a>";
+    while($row = $result1->fetch_assoc()) {
+        
+        echo "<a href='../../Vista/Usuario/MenuUser.php?correo=" . $row['usu_correo'] . "'>Regresar</a>";
+    }
+    
     $conn->close();
    ?>
    </body>

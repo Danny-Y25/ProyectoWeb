@@ -9,12 +9,12 @@
 
 session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }
 
  $codigo = $_GET["codigo"];
  ?>
- <form id="formulario01" method="POST" action="../../controladores/usuario/cambiar_contrasena.php">
+ <form id="formulario01" method="POST" action="../../Controladores/Usuario/Cambiar_contrasena.php">
 
  <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Contraseña Actual (*)</label>

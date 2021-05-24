@@ -2,16 +2,18 @@
 <html>
 <head>
  <meta charset="UTF-8">
- <script type="text/javascript" src="../..//Controladores/Usuario/BuscarUser.js">
+ <script type="text/javascript" src="../../Controladores/Usuario/BuscarUser.js">
     </script>
  <title>Menu Usuarios</title>
 </head>
 <body>
-
+<div id="etiqueta"><b>Ingrese el correo o cedula para buscar </b></div>
 
     <form onsubmit="return buscarPorCedula()">
-    
-        <input type="text" id="cedula" name="cedula" value="">
+        
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese la cedula">
+
+        <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo">
         <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarPorCedula()">
         <br>
     </form>
@@ -33,13 +35,13 @@
  <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /ProyectoWeb/public/VIsta/Login.html");
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }
  include '../../../Config/conexionBD.php';
  $cuenta = $_GET['correo'];
  //echo($cuenta);
  $sql = "SELECT * FROM usuario";
- $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and u.usu_correo='$cuenta'";
+ $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_correo='$cuenta'";
 
  $result = $conn->query($sql4);
 
@@ -56,8 +58,11 @@
     echo " <td>" . $row['tel_operadora'] . "</td>";
     echo " <td> <a href='Eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
     echo " <td> <a href='Modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-    echo " <td> <a href='Cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar
-   contraseña</a> </td>";
+    echo " <td> <a href='Cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiarcontraseña</a> </td>";
+    echo " <td> <a href='Eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar_Telefono</a> </td>";
+    echo " <td> <a href='Modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar_Telefono</a> </td>";
+    echo " <td> <a href='Cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Agregar_telefono</a> </td>";
+    
     echo "</tr>";
  }
  
