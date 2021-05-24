@@ -6,19 +6,25 @@
     <title>Iniciar sesión</title>
 </head>
 
-<body>
-    <form id="formulario01" method="POST" action="../controladores/login.php">
-        <label for="email">Correo electrónico </label>
+<body style="background-color: #094f77;">
+    <form id="formulario01" method="POST" action="../controladores/login.php" style="text-align: center;">
+        <label for="email" style="color: azure;">Correo electrónico &nbsp;&nbsp;</label>
         <input type="text" id="correo" name="correo" value="" placeholder="Ingrese el correo ..." />
         <br>
-        <label for="nombres">Constraseña (*)</label>
+        <br>
+        <label for="nombres" style="color: azure;">Constraseña (*)&nbsp;&nbsp;</label>
         <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su
  contraseña ..." />
         <br>
+        <br>
         <input type="submit" id="login" name="login" value="Iniciar Sesión" />
-
     </form>
-
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <button onclick="location.href='Registrar.html'" >Registrarse</button>
+    </div>
+    
 </body>
 
 </html>
