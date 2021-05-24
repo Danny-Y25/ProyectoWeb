@@ -2,7 +2,7 @@
 $db_servername = "localhost"; 
 $db_username = "root";
  $db_password = ""; 
- $db_name = "guiatelefonica"; 
+ $db_name = "guia_telefonos"; 
  $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
   $conn->set_charset("utf8"); 
   # Probar conexión 
