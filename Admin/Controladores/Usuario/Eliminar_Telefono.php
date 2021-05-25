@@ -8,9 +8,14 @@
 <?php
 
 session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
- }
+$valor_rol=$_SESSION['rol'];
+/*echo($valor_rol);
+if($valor_rol == "ADMIN"){
+  echo("denegado");
+}*/
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_rol == "ADMIN") {
+   header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
+}
 
  //incluir conexión a la base de datos
  include '../../../config/conexionBD.php';
