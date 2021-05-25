@@ -9,7 +9,7 @@
  
  //$sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N' and usu_cedula='$cedula'";
  //$sql2 = "SELECT * FROM telefono WHERE usu_cedula='$cedula'";
- $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and u.usu_cedula='$cedula'";
+ $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and t.tel_eliminado='N' and u.usu_cedula='$cedula'";
 
  
 //cambiar la consulta para puede buscar por ocurrencias de letras

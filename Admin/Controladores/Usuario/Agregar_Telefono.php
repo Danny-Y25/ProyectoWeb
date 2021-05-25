@@ -19,36 +19,37 @@ session_start();
  $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
  $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
- 
- date_default_timezone_set("America/Guayaquil");
- $fecha = date('Y-m-d H:i:s', time());
- $sql = "UPDATE telefono " .
- "SET tel_numero = '$telefono', " .
- "tel_tipo = '$tipo', " .
- "tel_operadora = '$operadora', " .
- "tel_fecha_modificacion = '$fecha' " .
- "WHERE tel_codigo = $codigo";
- if ($conn->query($sql) === TRUE) {
- echo "Se ha actualizado los datos personales correctamemte!!!<br>";
- } else {
- echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
- }
+
+ $sql = "SELECT usu_cedula FROM usuario WHERE usu_correo = '$correo'";
+
+$result = $conn->query($sql);
+ if ($result->num_rows > 0) {
+    while($row1 = $result->fetch_assoc()) {
+        $cedula=$row1['usu_cedula'];
+    }
+    } else {
+    echo "<tr>";
+    echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+    echo "</tr>";
+    }
+echo($cedula);
+
+
 
 //
 $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
- '$cedula', '$correo',  'N', null, null)";
+   'N', null, null,'$cedula', '$correo')";
 
-  if ($conn->query($sql) === TRUE) {
-  //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
-    if($conn->query($sql2) === TRUE){
-        //echo('se creo el telefono');
-    }
-
+  if ($conn->query($sql2) === TRUE) {
+ 
+        echo('se creo el telefono');
   } else {
   if($conn->errno == 1062){
-  echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
+  echo "<p class='error'>La persona con el numero $telefono ya esta registrada en el sistema </p>";
   }else{
+      
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+  
   }
   }
 //

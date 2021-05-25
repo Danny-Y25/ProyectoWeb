@@ -81,10 +81,6 @@
  </table>
 
  <h1>Informacion Telefonica</h1>
- 
- <button style="background-color: red"><a href='Agregar_Telefono.php?codigo='>Agregar</a></button>
- <br>
- <br>
 
  <table style="width:70%">
  <tr>
@@ -96,9 +92,13 @@
  <?php
  include '../../../Config/conexionBD.php';
  $cuenta = $_GET['correo'];
+
+ echo "<button style='background-color: red'> <a href='Agregar_Telefono.php?codigo=$cuenta'>Agregar Nuevo Telefono</a></button>";
  //echo($cuenta);
+ echo"<br>";
+ echo"<br>";
  $sql = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_correo='$cuenta'";
- $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_correo='$cuenta'";
+ $sql4 = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_correo='$cuenta' and t.tel_eliminado='N'";
 
  $result = $conn->query($sql4);
 
