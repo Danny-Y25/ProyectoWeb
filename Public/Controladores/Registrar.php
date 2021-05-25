@@ -27,7 +27,7 @@
  '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
 //echo($rol);
  $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
- '$cedula', '$correo')";
+ '$cedula', '$correo',  'N', null, null)";
 
   if ($conn->query($sql) === TRUE) {
   //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";

@@ -66,7 +66,7 @@ function validarCamposObligatorios() {
 	if (!bandera) {
 	  alert("Error: revisar los comentarios");
 	} else {
-	  alert("Bienvenido pasaste las validaciones");
+	  //alert("Bienvenido pasaste las validaciones");
 	}
 	return bandera;
   }

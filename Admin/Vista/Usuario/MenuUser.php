@@ -5,9 +5,16 @@
  <script type="text/javascript" src="../../Controladores/Usuario/BuscarUser.js">
     </script>
  <title>Menu Usuarios</title>
+ <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/reglas.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/index.css"/>
 </head>
-<body>
-<div id="etiqueta"><b>Ingrese el correo o cedula para buscar </b></div>
+<body  style="background-color:#094f77;">
+   
+   <img src="../../../imagenes/banner.jpg" width="100%" alt="">
+
+   
+<div id="etiqueta"><b >Ingrese el correo o cedula para buscar </b></div>
 
 
     <form onsubmit="return buscarPorCedula()">
@@ -23,12 +30,13 @@
 
 
  <h1>Informacion Del Usuario</h1>
- <table style="width:70%; border: black 1px solid " >
+ <table style="width:70% " >
  <tr>
- <th style="text-align: left">Cedula</th>
- <th style="text-align: left">Nombres</th>
- <th style="text-align: left">Apellidos</th>
- <th style="text-align: left">Correo</th>
+ <th style="text-align: center " bgcolor="white" >Cedula</th>
+ <th style="text-align: center" bgcolor="white">Nombres</th>
+ <th style="text-align: center" bgcolor="white">Apellidos</th>
+ <th style="text-align: center" bgcolor="white">Correo</th>
+ <th style="text-align: center" bgcolor="white" colspan="3">Opciones</th>
 
  </tr>
  <?php
@@ -74,11 +82,12 @@
 
  <h1>Informacion Telefonica</h1>
 
- <table style="width:70%; border: black 1px solid">
+ <table style="width:70%">
  <tr>
- <th style="text-align: left">Telefono</th>
- <th style="text-align: left">Tipo</th>
- <th style="text-align: left">Operadora</th>
+ <th style="text-align: center" bgcolor="white">Telefono</th>
+ <th style="text-align: center" bgcolor="white">Tipo</th>
+ <th style="text-align: center" bgcolor="white">Operadora</th>
+ <th style="text-align: center" bgcolor="white" colspan="3">Opciones</th>
  </tr>
  <?php
  include '../../../Config/conexionBD.php';
