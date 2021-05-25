@@ -30,7 +30,7 @@
     </div>
 
 
- <h1>Informacion Del Usuario</h1>
+ <h1>ADMINISTRAR USUARIOS</h1>
  <table style="width:70% " >
  <tr>
  <th style="text-align: center " bgcolor="white" >Cedula</th>
@@ -94,7 +94,6 @@ $sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N'";
  <th style="text-align: center" bgcolor="white">Telefono</th>
  <th style="text-align: center" bgcolor="white">Tipo</th>
  <th style="text-align: center" bgcolor="white">Operadora</th>
- <th style="text-align: center" bgcolor="white" colspan="3">Opciones</th>
  </tr>
  <?php
  include '../../../Config/conexionBD.php';
@@ -113,8 +112,7 @@ $sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N'";
     echo " <td>" . $row['tel_numero'] . "</td>";
     echo " <td>" . $row['tel_tipo'] . "</td>";
     echo " <td>" . $row['tel_operadora'] . "</td>";
-    echo " <td> <a href='Eliminar_Telefono.php?codigo=" . $row['tel_codigo'] . "'>Eliminar</a> </td>";
-    echo " <td> <a href='Modificar_Telefono.php?codigo=" . $row['tel_codigo'] . "'>Modificar</a> </td>";
+   
     
     echo "</tr>";
  }
