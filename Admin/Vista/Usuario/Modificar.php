@@ -34,8 +34,8 @@
 
  <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
  <label for="cedula">Cedula (*)</label>
- <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
-required placeholder="Ingrese la cedula ..." disabled/>
+ <input type="hidden" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>"
+required placeholder="Ingrese la cedula ..."/>
  <br>
  <label for="nombres">Nombres (*)</label>
  <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"];
@@ -47,8 +47,8 @@ required placeholder="Ingrese la cedula ..." disabled/>
  
  <br>
  <label for="correo">Correo electrónico (*)</label>
- <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
- disabled/>
+ <input type="hidden" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+ />
  <br>
 
  <input type="submit" id="modificar" name="modificar" value="Modificar" />

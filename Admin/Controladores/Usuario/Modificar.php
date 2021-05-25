@@ -24,6 +24,9 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_ro
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
  
+ echo($codigo);
+ echo($cedula);
+ echo($correo);
  date_default_timezone_set("America/Guayaquil");
  $fecha = date('Y-m-d H:i:s', time());
  echo("telefono");
