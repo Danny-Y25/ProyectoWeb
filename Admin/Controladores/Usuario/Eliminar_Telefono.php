@@ -22,9 +22,10 @@ session_start();
  //$sql = "DELETE FROM usuario WHERE codigo = '$codigo'";
  date_default_timezone_set("America/Guayaquil");
  $fecha = date('Y-m-d H:i:s', time());
- $sql = "UPDATE usuario SET usu_eliminado = 'S', usu_fecha_modificacion = '$fecha' WHERE
-usu_codigo = $codigo";
-$sql2 = "SELECT * FROM usuario WHERE usu_codigo = $codigo"; 
+ $sql = "UPDATE telefono SET tel_eliminado = 'S', tel_fecha_modificacion = '$fecha' WHERE
+tel_codigo = $codigo";
+
+$sql2 = "SELECT * FROM telefono WHERE tel_codigo = $codigo"; 
 
 $result2 = $conn->query($sql2);
 
@@ -39,8 +40,8 @@ if ($result2->num_rows > 0) {
  } else {
  echo "<p>Error: " . $sql . "<br>" . mysqli_error($conn) . "</p>";
  }
- //echo "<a href='../../Vista/Usuario/MenuUser.php?correo=$correo'>Regresar</a>";
- echo " <td> <a href='../../../config/Cerrarsesion.php'>Regresar</a> </td>";
+ echo "<a href='../../Vista/Usuario/MenuUser.php?correo=$correo'>Regresar</a>";
+ //echo " <td> <a href='../../Vista/Usuario/MenuUser.php?"$correo"'>Regresar</a> </td>";
  $conn->close();
  
  ?>

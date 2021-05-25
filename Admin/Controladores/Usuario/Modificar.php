@@ -22,6 +22,13 @@ session_start();
  
  date_default_timezone_set("America/Guayaquil");
  $fecha = date('Y-m-d H:i:s', time());
+ echo("telefono");
+ /*$sql1 = "UPDATE telefono " .
+ "SET usu_correo = '$correo', " .
+ "WHERE usu_cedula = $cedula";
+ echo("usuario");*/
+
+ 
  $sql = "UPDATE usuario " .
  "SET usu_cedula = '$cedula', " .
  "usu_nombres = '$nombres', " .
@@ -29,6 +36,9 @@ session_start();
  "usu_correo = '$correo', " .
  "usu_fecha_modificacion = '$fecha' " .
  "WHERE usu_codigo = $codigo";
+
+
+
  if ($conn->query($sql) === TRUE) {
  echo "Se ha actualizado los datos personales correctamemte!!!<br>";
  } else {
