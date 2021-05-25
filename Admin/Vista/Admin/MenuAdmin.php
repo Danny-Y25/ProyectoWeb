@@ -49,7 +49,7 @@
 
  //echo($cuenta);
 
-$sql = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N'";
+$sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N'";
 
  $result = $conn->query($sql);
 
