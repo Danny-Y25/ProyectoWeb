@@ -42,6 +42,8 @@
  </tr>
  <?php
  session_start();
+ $valor_rol=$_SESSION['rol'];
+ echo($valor_rol);
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
     header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }

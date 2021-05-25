@@ -17,6 +17,7 @@ MD5('$contrasena')";
         $_SESSION['rol']=$rol;
     }else{
         header("Location: ../../Admin/Vista/Admin/MenuAdmin.php");
+        $_SESSION['rol']=$rol;
     }}else {
         header("Location: ../vista/login.html");
       
