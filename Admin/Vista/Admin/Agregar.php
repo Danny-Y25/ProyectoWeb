@@ -13,7 +13,7 @@
 </head>
 <body>
 	
-		<form id="formulario01"  method="POST" action="../../Controladores/Admin/Agregar.php" onsubmit="return validarCamposObligatorios()">
+		<form id="formulario01"  method="POST" action="../../../Controladores/Admin/Agregar.php" onsubmit="return validarCamposObligatorios()">
             
 			<!-- Grupo: Cedula -->
 			<div class="formulario__grupo" id="grupo__cedula">
@@ -134,7 +134,7 @@
 
 			<input type="submit" id="crear" name="crear" value="Aceptar" />
             <input  type="reset" id="cancelar" name="cancelar" value="Cancelar" />
-			<input  type="button" onclick="location.href='Index.html'" id="regresar" name="regresar" value="Regresar" />
+			<input  type="button" onclick="location.href='MenuAdmin.php'" id="regresar" name="regresar" value="Regresar" />
 
 		</form>
 	

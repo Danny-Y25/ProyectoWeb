@@ -13,7 +13,7 @@
     
  <?php
  //incluir conexión a la base de datos
- include 'C:\xampp\htdocs\ProyectoWeb\ProyectoWeb\Config\conexionBD.php';
+ include '../../../Config/conexionBD.php';
  $cedula = isset($_POST["cedula"]) ? trim($_POST["cedula"]) : null;
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
@@ -23,11 +23,19 @@
  $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
+ if(preg_match("/\w+@+ups.edu.ec/", $correo)){
+  
+    $rol = mb_strtoupper("admin");
+   }else if(preg_match("/\w+@+est.ups.edu.ec/", $correo)) { 
+    
+    $rol = mb_strtoupper("user");
+  }
+
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', 
  '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
-//echo($rol);
+
  $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
- '$cedula', '$correo',  'N', null, null)";
+   'N', null, null,'$cedula', '$correo')";
 
   if ($conn->query($sql) === TRUE) {
   //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
@@ -37,7 +45,7 @@
 
   } else {
   if($conn->errno == 1062){
-    echo("alert("la cedula ya esta registrada");");
+  echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
   }else{
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
   }
@@ -45,8 +53,10 @@
  
   //cerrar la base de datos
   $conn->close();
-  header("Location: ../../Vista/Admin/MenuAdmin.php")
- 
+  
+  
+  header("Location: ../../Vista/Admin/MenuAdmin.php");
   ?>
+
  </body>
  </html>
