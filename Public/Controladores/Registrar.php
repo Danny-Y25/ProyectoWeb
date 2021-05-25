@@ -24,7 +24,16 @@
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
 
- $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', 
+ if(preg_match("/\w+@+ups.edu.ec/", $correo)){
+  
+  $rol = mb_strtoupper("admin");
+ }else if(preg_match("/\w+@+est.ups.edu.ec/", $correo)) { 
+  
+  $rol = mb_strtoupper("user");
+}
+//echo($rol);
+
+$sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', 
  '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
 
  $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
