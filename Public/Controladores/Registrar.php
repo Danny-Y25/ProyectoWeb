@@ -23,11 +23,12 @@
  $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
+
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', 
  '$correo', MD5('$contrasena'), '$rol',  'N', null, null)";
-//echo($rol);
+
  $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora', 
- '$cedula', '$correo',  'N', null, null)";
+   'N', null, null,'$cedula', '$correo')";
 
   if ($conn->query($sql) === TRUE) {
   //echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
@@ -45,8 +46,10 @@
  
   //cerrar la base de datos
   $conn->close();
+  
+  
   header("Location: /ProyectoWeb/ProyectoWeb/Public/VIsta/Index.html");
- 
   ?>
+
  </body>
  </html>

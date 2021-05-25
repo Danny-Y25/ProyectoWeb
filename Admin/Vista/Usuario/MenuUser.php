@@ -81,6 +81,10 @@
  </table>
 
  <h1>Informacion Telefonica</h1>
+ 
+ <button style="background-color: red"><a href='Agregar_Telefono.php?codigo='>Agregar</a></button>
+ <br>
+ <br>
 
  <table style="width:70%">
  <tr>
@@ -105,9 +109,9 @@
     echo " <td>" . $row['tel_numero'] . "</td>";
     echo " <td>" . $row['tel_tipo'] . "</td>";
     echo " <td>" . $row['tel_operadora'] . "</td>";
-    echo " <td> <a href='Eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
-    echo " <td> <a href='Modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-    echo " <td> <a href='Cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Agregar</a> </td>";
+    echo " <td> <a href='Eliminar_Telefono.php?codigo=" . $row['tel_codigo'] . "'>Eliminar</a> </td>";
+    echo " <td> <a href='Modificar_Telefono.php?codigo=" . $row['tel_codigo'] . "'>Modificar</a> </td>";
+    
     echo "</tr>";
  }
  
@@ -119,10 +123,11 @@
  
  
  $conn->close();
+ //echo " <td> <a href='Agregar_Telefono.php?codigo=" . $row['tel_codigo'] . "'>Agregar</a> </td>";
  ?>
  
  </table>
  <br>
-<button><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
+<button style="background-color: red"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
 </body>
 </html>
