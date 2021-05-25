@@ -33,7 +33,8 @@
  <?php
   session_start();
   if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-  header("Location: /SistemaDeGestion/public/vista/login.html");
+  header("Location: \ProyectoWeb\ProyectoWeb\Public\VIsta\Login.html");
+ 
   }
  include '../../../config/conexionBD.php';
  $sql = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and u.usu_correo=t.usu_correo";
