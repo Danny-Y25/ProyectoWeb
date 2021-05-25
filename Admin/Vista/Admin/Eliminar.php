@@ -8,9 +8,14 @@
  <?php
 
 session_start();
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+$valor_rol=$_SESSION['rol'];
+ /*echo($valor_rol);
+ if($valor_rol == "ADMIN"){
+   echo("denegado");
+ }*/
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_rol == "USER") {
     header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
-}
+ }
 
  $codigo = $_GET["codigo"];
  $sql = "SELECT * FROM usuario  where usu_codigo=$codigo";
