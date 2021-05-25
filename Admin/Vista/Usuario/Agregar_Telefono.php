@@ -4,7 +4,9 @@
  <meta charset="UTF-8">
  <title>Modificar Telefono</title>
 </head>
-<body>
+<body  style="background-color:#094f77;">
+   
+   <img src="../../../imagenes/banner.jpg" width="100%" alt="">
  <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){

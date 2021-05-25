@@ -14,7 +14,7 @@ MD5('$contrasena')";
     }
     if($rol == "USER"){ 
         header("Location: ../../Admin/Vista/Usuario/MenuUser.php?correo=$usuario");
-        
+        $_SESSION['rol']=$rol;
     }else{
         header("Location: ../../Admin/Vista/Admin/MenuAdmin.php");
     }}else {

@@ -37,13 +37,16 @@
 
  echo "<tr>";
  echo " <td>" . $row1['usu_cedula'] . "</td>";
- echo " <td>" . $row1['usu_correo'] . "</td>";
+ //echo " <td>" . $row1['usu_correo'] . "</td>";
+ $correo1= $row1['usu_correo'];
+ echo " <td> <a href='mailto:" . $row1['usu_correo'] . "'>" . $row1['usu_correo'] . "</a> </td>";
  echo " <td>" . $row1['usu_nombres'] . "</td>";
  echo " <td>" . $row1['usu_apellidos'] . "</td>";
- echo " <td>" . $row1['tel_numero'] . "</td>";
+ echo " <td> <a href='tel:+593" . $row1['tel_numero'] . "'>" . $row1['tel_numero'] . "</a> </td>"; 
+ //echo " <td>" . $row1['tel_numero'] . "</td>";
  echo " <td>" . $row1['tel_tipo'] . "</td>";
  echo " <td>" . $row1['tel_operadora'] . "</td>";
-
+//<a href="tel:+593993862284">(593) 0993862284</a>>
  
  echo "</tr>";
  

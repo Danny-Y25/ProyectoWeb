@@ -4,7 +4,9 @@
  <meta charset="UTF-8">
  <title>Modificar datos de persona</title>
 </head>
-<body>
+<body  style="background-color:#094f77;">
+   
+   <img src="../../../imagenes/banner.jpg" width="100%" alt="">
  <?php
 
 session_start();

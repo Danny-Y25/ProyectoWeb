@@ -41,9 +41,12 @@
  </tr>
  <?php
  session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+ 
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
  }
+
+
  include '../../../Config/conexionBD.php';
  $cuenta = $_GET['correo'];
  //echo($cuenta);
@@ -129,5 +132,30 @@
  </table>
  <br>
 <button style="background-color: red"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
+
+<footer>
+        <table>
+            <tr>
+                <td>
+                    <p>Danny Yunga y Sebastian Bedoya</p>
+                    <p>Universidad Politécnica Salesiana</p>
+                    &copy; Todos los Derechos Resrvados <br/>
+                </td>
+                <td>
+                   <p>Email: <a href="mailto:dannyy25000@gmail.com">dannyy25000@gmail.com</a></p>
+                    <p>Call: <a href="tel:+593939889081">(593) 0939889081</a></p>
+                    
+                    <p>Email: <a href="mailto:sebas120720@gmail.com">sebas120720@gmail.com</a></p>
+                    <p>Call: <a href="tel:+593993862284">(593) 0993862284</a></p>
+                    
+
+                </td>
+                
+            </tr>
+        </table>
+        
+    </footer>
+    
+
 </body>
 </html>

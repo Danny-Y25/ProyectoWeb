@@ -3,8 +3,14 @@
 <head>
  <meta charset="UTF-8">
  <title>Modificar datos de persona</title>
+ <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/reglas.css"/>
+    
+   <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/index.css"/>
 </head>
-<body>
+<body  style="background-color:#094f77;">
+   
+   <img src="../../../imagenes/banner.jpg" width="100%" alt="">
+   <h1>Modificar</h1>
  <?php
  session_start();
  if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
@@ -37,7 +43,7 @@ required placeholder="Ingrese la cedula ..." disabled/>
  <br>
  <label for="correo">Correo electrónico (*)</label>
  <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
-required placeholder="Ingrese el correo electrónico ..."/>
+ disabled/>
  <br>
 
  <input type="submit" id="modificar" name="modificar" value="Modificar" />
