@@ -15,13 +15,17 @@ MD5('$contrasena')";
     if($rol == "USER"){ 
         header("Location: ../../Admin/Vista/Usuario/MenuUser.php?correo=$usuario");
         $_SESSION['rol']=$rol;
+        $_SESSION['correo1']=$usuario;
+
     }else{
         header("Location: ../../Admin/Vista/Admin/MenuAdmin.php");
         $_SESSION['rol']=$rol;
+        $_SESSION['correo1']=$usuario;
     }}else {
         header("Location: ../vista/login.html");
       
-}
+}   
+    
      $conn->close();
 
 ?>
