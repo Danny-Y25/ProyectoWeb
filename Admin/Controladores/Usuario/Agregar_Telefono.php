@@ -47,7 +47,7 @@ $sql2 = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora',
 
   if ($conn->query($sql2) === TRUE) {
  
-        echo('se creo el telefono');
+        //echo('se creo el telefono');
   } else {
   if($conn->errno == 1062){
   echo "<p class='error'>La persona con el numero $telefono ya esta registrada en el sistema </p>";

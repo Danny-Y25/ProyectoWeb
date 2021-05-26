@@ -26,10 +26,10 @@
 
     <div id="informacion">
     <br>
-     <button onclick="location.href='Agregar.php'" >Registrarse</button>
+     
     </div>
 
-
+    <button onclick="location.href='Agregar.php'" >Registrarse</button>
  <h1>ADMINISTRAR USUARIOS</h1>
  <table style="width:70% " >
  <tr>
@@ -103,7 +103,7 @@ $sql = "SELECT * FROM usuario WHERE usu_eliminado = 'N'";
  
  //echo($cuenta);
  
- $sql = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and u.usu_eliminado = 'N' and u.usu_correo=t.usu_correo";
+ $sql = "SELECT * FROM usuario u, telefono t WHERE u.usu_cedula=t.usu_cedula and t.tel_eliminado = 'N' and u.usu_correo=t.usu_correo";
 
  $result = $conn->query($sql);
 

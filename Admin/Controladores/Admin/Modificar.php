@@ -9,7 +9,7 @@
 
 session_start();
 $valor_rol=$_SESSION['rol'];
-if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_rol == "ADMIN") {
+if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_rol == "USER") {
    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
 }
  //incluir conexión a la base de datos
@@ -50,6 +50,6 @@ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_ro
 </body>
 <br>
 <div >
-        <button onclick="location.href='MenuAdmin.php'" >Regresar</button>
+        
     </div>
 </html>
