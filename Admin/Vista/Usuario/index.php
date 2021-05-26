@@ -35,8 +35,8 @@ $cuenta=$_SESSION['correo1'];
         <img src="../../../imagenes/banner.jpg" alt="">
 
         <div style="text-align: center;"></div>
-            <button style="position: relative;top: 10px;left: 1090px; width: 98px; height: 30px;"><a href='MenuUser.php?correo=<?php echo $cuenta; ?>'>Mi pagina</a></button>
-            <button style="position: relative;top: 10px;left: 1100px; width: 98px; height: 30px;"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
+            <button style="position: relative;top: 10px;left: 1090px; width: 101px; height: 30px; background-color: red"><a href='MenuUser.php?correo=<?php echo $cuenta; ?>'>Mi pagina</a></button>
+            <button style="position: relative;top: 10px;left: 1100px; width: 101px; height: 30px; background-color: red"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
         </div>
         <h1>Guia telefonica</h1>
     </header>
