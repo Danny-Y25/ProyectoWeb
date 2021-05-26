@@ -11,13 +11,15 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color:#094f77;">
+	<img src="../../imagenes/banner.jpg" width="100%" alt="">
+
 	
 		<form id="formulario01"  method="POST" action="../Controladores/Registrar.php" onsubmit="return validarCamposObligatorios()">
             
 			<!-- Grupo: Cedula -->
 			<div class="formulario__grupo" id="grupo__cedula">
-				<label for="cedula" class="formulario__label">Cédula</label>
+				<label style="color: azure" for="cedula" class="formulario__label">Cédula</label>
 				<div class="formulario__grupo-input">
 					<input type="text"  name="cedula" id="cedula" placeholder=""
                     onkeyup="return validarCedula(this)"/>
@@ -28,7 +30,7 @@
 
 			<!-- Grupo: Nombres -->
 			<div class="formulario__grupo" id="grupo__nombre">
-				<label for="nombres" class="formulario__label">Nombre</label>
+				<label style="color: azure" for="nombres" class="formulario__label">Nombre</label>
 				<div class="formulario__grupo-input">
 					<input type="text"  name="nombres" id="nombres" placeholder=""
                     onkeyup="return validarLetras(this)"/>
@@ -40,7 +42,7 @@
 
             <!-- Grupo: Apellidos -->
 			<div class="formulario__grupo" id="grupo__apellidos">
-				<label for="apellidos" class="formulario__label">Apellidos</label>
+				<label style="color: azure"  for="apellidos" class="formulario__label">Apellidos</label>
 				<div class="formulario__grupo-input">
 					<input type="text"  name="apellidos" id="apellidos" placeholder=""
                     onkeyup="return validarApellidos(this)"/>
@@ -53,7 +55,7 @@
 
             <!-- Grupo: Correo Electronico -->
 			<div class="formulario__grupo" id="grupo__correo">
-				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<label style="color: azure" for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
 					<input type="email"  name="correo" id="correo" placeholder=""
                     onkeyup="return validarCorreo(this)"/>
@@ -65,7 +67,7 @@
 
             <!-- Grupo: Contraseña -->
 			<div class="formulario__grupo" id="grupo__password">
-				<label for="password" class="formulario__label">Contraseña</label>
+				<label style="color: azure"  for="password" class="formulario__label">Contraseña</label>
 				<div class="formulario__grupo-input">
 					<input type="password"  name="contrasena" id="contrasena" placeholder=""
                     onkeyup="return validarContrasena(this)"/>
@@ -78,7 +80,7 @@
 
             <!-- Grupo: TIpo Teléfono -->
 			<div class="formulario__grupo" id="grupo__tipo">
-				<label for="tipo" class="formulario__label">Tipo de Teléfono</label>
+				<label style="color: azure"  for="tipo" class="formulario__label">Tipo de Teléfono</label>
 				<div class="formulario__grupo-input">
 					<input type="text"  name="tipo" id="tipo" placeholder=""
                     onkeyup="return validarCorreo(this)"/>
@@ -90,7 +92,7 @@
 
 			<!-- Grupo: Teléfono -->
 			<div class="formulario__grupo" id="grupo__telefono">
-				<label for="telefono" class="formulario__label">Teléfono</label>
+				<label style="color: azure"  for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
 					<input type="text" name="telefono" id="telefono" placeholder=""
                     onkeyup="return validarTelefono(this)"/>
@@ -102,7 +104,7 @@
 
             <!-- Grupo: Operadora -->
 			<div class="formulario__grupo" id="grupo__Operadora">
-				<label for="Operadora" class="formulario__label">Operadora</label>
+				<label style="color: azure"  for="Operadora" class="formulario__label">Operadora</label>
 				<div class="formulario__grupo-input">
 					<input type="text"  name="operadora" id="operadora" placeholder=""
                     onkeyup="return validarCorreo(this)"/>
@@ -126,7 +128,7 @@
 
 			<!-- Grupo: Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
-				<label class="formulario__label">
+				<label style="color: azure"  class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
 					Acepto los Terminos y Condiciones
 				</label>

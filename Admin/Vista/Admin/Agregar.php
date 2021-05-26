@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <script type="text/javascript" src="../Controladores/ValidacionRegistrar.js"></script>
+    <script type="text/javascript" src="../../../Public/Controladores/ValidacionRegistrar.js"></script>
 	<title>Registrar usuario</title>
     <style type="text/css">
         .error {
@@ -13,6 +13,7 @@
 </head>
 <body>
 <?php
+session_start();
 $valor_rol=$_SESSION['rol'];
  /*echo($valor_rol);
  if($valor_rol == "ADMIN"){
@@ -23,7 +24,7 @@ $valor_rol=$_SESSION['rol'];
  }
  ?>	
 	
-		<form id="formulario01"  method="POST" action="../../../Controladores/Admin/Agregar.php" onsubmit="return validarCamposObligatorios()">
+		<form id="formulario01"  method="POST" action="../../../Admin/Controladores/Admin/Agregar.php" onsubmit="return validarCamposObligatorios()">
             
 			<!-- Grupo: Cedula -->
 			<div class="formulario__grupo" id="grupo__cedula">
