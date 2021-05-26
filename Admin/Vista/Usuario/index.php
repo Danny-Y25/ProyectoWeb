@@ -3,26 +3,40 @@
 
 <head>
     <meta charset="utf-8"/>
-    <script type="text/javascript" src="../Controladores/Buscar.js"></script>
+    <script type="text/javascript" src="../../Controladores/Usuario/BuscarUser.js"></script>
     <title> Menu</title>
     
     
-    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/reglas.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/reglas.css"/>
     
-    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/index.css"/>
     
-    <link rel="stylesheet" type="text/css" href="../Controladores/CSS/2-columnas.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../Public/Controladores/CSS/2-columnas.css"/>
     
 </head>
 
 <body  style="background-color:#094f77;">
+<?php
+session_start();
+
+$valor_rol=$_SESSION['rol'];
+$cuenta=$_SESSION['correo1'];
+ echo($valor_rol);
+ /*if($valor_rol == "ADMIN"){
+   echo("denegado");
+ }*/
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE || $valor_rol == "ADMIN") {
+    header("Location: /ProyectoWeb/ProyectoWeb/public/VIsta/Login.html");
+ }
+ 
+ ?>	
 <header></header>
     <header border="10px">
-        <img src="../../imagenes/banner.jpg" alt="">
-        
+        <img src="../../../imagenes/banner.jpg" alt="">
+
         <div style="text-align: center;"></div>
-            <button onclick="location.href='Login.html'" style="position: relative;top: 10px;left: 1090px; width: 98px; height: 30px;">Iniciar sesion</button>
-            <button onclick="location.href='Registrar.html'" style="position: relative;top: 10px;left: 1100px; width: 98px; height: 30px;">Registrarse</button>
+            <button style="position: relative;top: 10px;left: 1090px; width: 101px; height: 30px; background-color: red"><a href='MenuUser.php?correo=<?php echo $cuenta; ?>'>Mi pagina</a></button>
+            <button style="position: relative;top: 10px;left: 1100px; width: 101px; height: 30px; background-color: red"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
         </div>
         <h1>Guia telefonica</h1>
     </header>

@@ -135,7 +135,8 @@
  
  </table>
  <br>
-<button style="background-color: red"><a href='../../../config/Cerrarsesion.php'>Cerrar Sesion</a></button>
+<button style="background-color: red"><a href='../../../Config/Cerrarsesion.php'>Cerrar Sesion</a></button>
+<button style="background-color: red"><a href='index.php'>Pagina Principal</a></button>
 
 <footer>
         <table>
